@@ -104,7 +104,7 @@ class Api::V1::UsersController < ApplicationController
     end
     @user.update(username: params[:username], location: params[:location])
 
-    render json: {user: @user, avatar: @user.avatar}, status: :ok
+    render json: @user, status: :ok
   end
 
   private
