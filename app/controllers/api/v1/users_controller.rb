@@ -21,34 +21,10 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def update
-    puts params
-
-
     @user = User.find(params[:id])
-
     if params[:avatar]
-      # puts "hi"
-      # puts "\n"
-      # puts "\n"
-      # puts "\n"
-      # puts "\n"
-      # puts "params[:avatar]"
-      # puts "\n"
-      # puts "\n"
-      # puts params[:avatar]
-      # puts "\n"
-      # puts "\n"
-      # puts "params[:avatar].io"
-      # puts "\n"
-      # puts "\n"
-      # puts params[:avatar].to_io
-      # puts "\n"
-      # puts "\n"
-      # puts "\n"
-      # puts "\n"
-      # puts "File.new(params[:avatar].to_io)"
-      # puts File.new(params[:avatar].to_io)
-      # puts "\n"
+      
+      # if rails_blob_url(params[:avatar]) != rails_blob_url(@user.avatar)
 
 
       @user.avatar.attach(params[:avatar])
